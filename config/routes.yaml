@@ -1,0 +1,6 @@
+index:
+   path: /
+   controller: App\Controller\PublicController::public
+
+logout:
+  path: /logout

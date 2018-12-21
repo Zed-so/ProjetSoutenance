@@ -1,0 +1,53 @@
+{% extends 'base.html.twig'%}
+
+
+{% block body %}
+
+
+<div class="row">
+ <div class="col-md-4">
+
+{{ form_start(form) }}
+
+<h1>Formulaire </h1>
+
+<div class="form-group">
+{{ form_row(form.nom, {attr: {class: 'form-control'}}) }}
+</div>
+
+<div class="form-group">
+{{ form_row(form.email, {attr: {class: 'form-control'}}) }}
+</div>
+
+<div class="form-group">
+{{ form_row(form.message, {attr: {class: 'form-control'}}) }}
+</div>
+
+<div class="form-group text-center">
+<button class="btn btn-primary" role="button" type="submit">Envoyer</button>
+
+</div>
+
+{{ form_end(form) }}
+
+</div>
+
+
+
+<div class="col-md-8">
+<h1>Carte</h1>
+<div id="map"></div>
+</div>
+
+
+ </div>
+ </div>
+
+{% endblock %}
+
+{% block javascripts %}
+
+<script src="{{ asset('js/gmaps.js') }}"></script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=initMap&key=AIzaSyDwMSNslhTJzpI1A8U6iffFKfCCVP47awo"></script>
+
+{% endblock %}
